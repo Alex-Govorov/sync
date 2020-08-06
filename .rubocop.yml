@@ -1,5 +1,5 @@
 AllCops:
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.5
 
 # Commonly used screens these days easily fit more than 80 characters.
 Metrics/LineLength:
@@ -8,11 +8,17 @@ Metrics/LineLength:
 # Too short methods lead to extraction of single-use methods, which can make
 # the code easier to read (by naming things), but can also clutter the class
 Metrics/MethodLength: 
-  Max: 20
+  Max: 30
 
 # The guiding principle of classes is SRP, SRP can't be accurately measured by LoC
 Metrics/ClassLength:
   Max: 1500
+
+Metrics/CyclomaticComplexity:
+  Max: 20
+
+Metrics/AbcSize:
+ Max: 45
 
 Style/AsciiComments:
   Enabled: false
@@ -22,4 +28,3 @@ Style/FrozenStringLiteralComment:
 
 Documentation:
   Enabled: false
-  
